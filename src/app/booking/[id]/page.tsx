@@ -55,7 +55,7 @@ export default function BookingPage() {
 
       // Create booking API request
       const response = await axios.post(
-        `http://localhost:8080/api/bookings`,
+        `${process.env.NEXT_PUBLIC_API_PROD_URI}/api/bookings`,
         {
           schedule_id: id,
           seat_number: selectedSeat,
