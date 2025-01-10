@@ -26,7 +26,7 @@ export default function BookingPage() {
     const fetchBookingDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/schedules/${id}`
+          `${process.env.NEXT_PUBLIC_API_PROD_URI}/api/schedules/${id}`
         );
         setSchedule(response.data);
       } catch (err) {
